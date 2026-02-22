@@ -17,3 +17,6 @@ class CorrectionsNotice(CorrectionsNoticeBase):
     NoticeID: int
     class config:
         from_attributes = True
+
+class CorrectionNoticeCreate(CorrectionsNoticeBase):
+    pass
