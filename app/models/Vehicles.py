@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String
 from app.db.base import Base
 
 class Vehicles(Base):
+    __tablename__ = "Vehicles"
     Drivers_license = Column(Integer)
     Colour = Column(String(12))
     Make = Column(String(20))

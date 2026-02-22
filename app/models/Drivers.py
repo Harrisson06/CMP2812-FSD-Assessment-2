@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String
 from app.db.base import Base
 
 class Drivers(Base):
+    __tablename__ = "Drivers"
     First_name = Column(String(20))
     Last_name = Column(String(20))
     Address = Column(String(50))
