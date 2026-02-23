@@ -27,8 +27,10 @@ def create_user(db: Session, user_in: UserCreate) -> UserModel:
         email=user_in.email,
         password_hash=hash_password(user_in.password), # Hashes the password before saving it
         role=user_in.role or "user", # If no role is placed defaults to user rather than a null field or error
-        OfficerID=user_in.OfficerID
+        OfficerID=user_in.OfficerID,
+        DriversLicense = user_in.DriversLicense
     )
+
     db.add(user)        # Add's the new user
     db.commit()         # Saves the new user to the database
     db.refresh(user)    # Refreshes the database to get a new ID 

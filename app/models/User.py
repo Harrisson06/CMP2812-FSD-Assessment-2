@@ -9,4 +9,5 @@ class User(Base):
     email = Column(String(200), unique=True, index=True, nullable=False)
     password_hash = Column(String(255), nullable=False)
     role = Column(String(20), nullable=False, default="Citizen")
+    DriversLicense = Column(Integer, ForeignKey("Drivers.DriverLicense"))
     OfficerID = Column(Integer, ForeignKey("Officers.OfficerID"), nullable=True)

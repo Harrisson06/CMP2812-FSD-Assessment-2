@@ -17,6 +17,6 @@ class DriversBase(BaseModel):
 
 # Full schema for Drivers, allows orm mapping from the db models. 
 class Drivers(DriversBase):
-    Drivers_license: int 
+    DriverLicense: int 
     class Config:
         from_attributes = True

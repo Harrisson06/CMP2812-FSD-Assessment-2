@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException, Depends, status
 from pydantic import BaseModel
 from typing import List, Optional
 
-from app.Routers.Corrections_notice import router as Corrections_router 
+from app.API.Corrections_notice import router as Corrections_router 
 from app.API.User import router as User_router
 from app.API.Auth import router as Auth_router
 from app.db.init_db import init_db
