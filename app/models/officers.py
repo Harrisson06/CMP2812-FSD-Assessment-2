@@ -7,4 +7,4 @@ class Officers(Base):
     OfficerID = Column(Integer, primary_key=True, autoincrement=True)
     FirstName = Column(String(30))
     LastName = Column(String(30))
-    PerssonelNumber = Column(Integer, unique=True)
+    PerssonnelNumber = Column(Integer, unique=True)

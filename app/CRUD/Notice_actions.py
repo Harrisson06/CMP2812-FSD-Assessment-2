@@ -6,6 +6,6 @@ def get_notice_actions(db: Session):
     # returns all Correction notices 
     return db.query(Notice_actions_model).all()
 
-def get_notice_actions(db: Session, NoticeID: int):
+def get_notice_action(db: Session, NoticeID: int):
     # returns a specific notice relating to the notice ID
     return db.query(Notice_actions_model).filter(Notice_actions_model.NoticeID == NoticeID).first()
