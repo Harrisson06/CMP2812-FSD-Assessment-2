@@ -3,8 +3,8 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from typing import List
 from app.schemas.Officers import Officers
-from app.CRUD.Officers import get_officer_by_license
-from app.CRUD.Officers import get_officers
+from app.crud.Officers import get_officer_by_license
+from app.crud.Officers import get_officers
 
 router = APIRouter()
 

@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.core.Dependancy import get_cur_user
 from app.schemas.Corrections_notice import CorrectionsNoticeBase, CorrectionsNotice
-from app.CRUD.Corrections_notice import create_correction_notice, get_violations_by_license
+from app.crud.Corrections_notice import create_correction_notice, get_violations_by_license
 
 router = APIRouter()
 
