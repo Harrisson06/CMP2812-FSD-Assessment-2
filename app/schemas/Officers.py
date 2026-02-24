@@ -3,9 +3,9 @@ from typing import Optional
 
 # # Base schema for the Officers table
 class OfficersBase(BaseModel):
-    First_name: Optional[str] = None
-    Last_name: Optional[str] = None
-    Perssonnel_nunber: Optional[int] = None
+    FirstName: Optional[str] = None
+    LastName: Optional[str] = None
+    PersonnelNumber: Optional[int] = None
 
 # Full schema for Officers, allows orm mapping from the db models. 
 class Officers(OfficersBase):
