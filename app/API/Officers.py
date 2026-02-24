@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.session import get_db
-from typing import list
+from typing import List
 from app.schemas.Officers import Officers
 from app.CRUD.Officers import get_officer_by_license
 from app.CRUD.Officers import get_officers
@@ -16,6 +16,6 @@ def read_officer_by_license(drivers_license: int, db: Session = Depends(get_db))
         raise HTTPException(status_code=404, detail="No officer linked to this License")
     return officer
 
-@router.get("/Officers", response_model=list[Officers])
+@router.get("/Officers", response_model=List[Officers])
 def read_officers(db: Session = Depends(get_db)):
-    return get_officers
+    return get_officers(db)
